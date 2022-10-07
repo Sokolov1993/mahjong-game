@@ -29,4 +29,10 @@
 .blackBorder {
   border: 1px solid #0a0a0c;
   border-radius: 8px;
+  pointer-events: none;
+
+  &:hover {
+    cursor: default;
+    box-shadow: none;
+  }
 }
