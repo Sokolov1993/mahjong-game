@@ -5,6 +5,10 @@ import classes from './Card.module.scss';
 const Card = ({ card, onClick, id, matched, cardFlipepd }) => {
   const [isCardShown, setIsCardShown] = useState(true);
 
+  const cardSelectedClass =
+    cardFlipepd && isCardShown ? classes.orangeBodrer : '';
+  const cardsMatchedClass = matched ? classes.blackBorder : '';
+
   useEffect(() => {
     if (cardFlipepd === 0) {
       setTimeout(() => {
@@ -17,7 +21,7 @@ const Card = ({ card, onClick, id, matched, cardFlipepd }) => {
 
   return (
     <div
-      className={classes.card}
+      className={`${classes.card} ${cardSelectedClass} ${cardsMatchedClass}`}
       onClick={(event) => onClick(event, id, card, setIsCardShown)}
     >
       {(isCardShown || matched) && <p className={classes.number}>{card}</p>}

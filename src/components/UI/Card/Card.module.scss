@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
 
-  transition: box-shadow ease-in-out 0.4s;
+  transition: box-shadow ease-in-out 0.4s, border ease-in-out 0.3s;
 
   &:hover {
     cursor: pointer;
@@ -19,4 +19,14 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
+}
+
+.orangeBodrer {
+  border: 0.5px solid #ed5517;
+  border-radius: 8px;
+}
+
+.blackBorder {
+  border: 1px solid #0a0a0c;
+  border-radius: 8px;
 }
